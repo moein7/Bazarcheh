@@ -1,0 +1,41 @@
+{
+  "kit": "Bazarcheh Support Dashboard Agent Engineering Kit",
+  "version": "1.0.0",
+  "generated_files": 82,
+  "skills": [
+    "adr-governance",
+    "ai-safety",
+    "business-sla-engine",
+    "data-classification",
+    "docker-integration",
+    "frontend-api-integration",
+    "llm-integration",
+    "model-evaluation",
+    "python-backend",
+    "react-dashboard",
+    "repository-audit",
+    "requirements-analysis",
+    "rtl-accessibility",
+    "technical-documentation",
+    "testing-qa"
+  ],
+  "agents": [
+    "Orchestrator",
+    "Repository Auditor",
+    "Backend Engineer",
+    "Business Logic / SLA Engineer",
+    "AI / LLM Engineer",
+    "Frontend Engineer",
+    "QA / Security Engineer",
+    "Release Engineer"
+  ],
+  "note": "Templates and proposed governance. Repository audit and test results must be filled using actual project evidence.",
+  "active_entrypoints": [
+    "/AGENTS.md",
+    "/CLAUDE.md",
+    "/.agents/",
+    "/docs/agent-governance/"
+  ],
+  "governance_version": "1.0.0",
+  "notes": "Agent roles are instruction files; no multi-agent runtime is implied. Task approval is required before implementation."
+}

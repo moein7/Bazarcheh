@@ -1,0 +1,22 @@
+flowchart TD
+    O["Orchestrator / Engineering Lead"]
+    A["Repository Auditor"]
+    B["Backend Agent"]
+    S["Business Logic / SLA Agent"]
+    L["AI / LLM Agent"]
+    F["Frontend Agent"]
+    Q["QA / Security Agent"]
+    R["Release / Delivery Gate"]
+
+    O --> A
+    A --> O
+    O --> B
+    O --> S
+    O --> L
+    O --> F
+    B --> Q
+    S --> Q
+    L --> Q
+    F --> Q
+    Q --> O
+    O --> R

@@ -1,0 +1,21 @@
+flowchart TD
+    CSV["Daily CSV export"] --> ING["Ingestion and validation"]
+    ING --> NORM["Text and digit normalization"]
+    NORM --> DUP["Duplicate detection"]
+    NORM --> ORD["Order reference extraction"]
+    NORM --> CLS["Category classification"]
+    NORM --> SEV["Severity and answered-state determination"]
+    DUP --> SLA["Business calendar and SLA engine"]
+    SEV --> SLA
+    ORD --> RES["Analysis result"]
+    CLS --> RES
+    SLA --> RES
+    RES --> CLI["Stable CLI JSON"]
+    RES --> UI["React RTL dashboard"]
+    UI --> CLOCK["Browser clock / live SLA recompute"]
+    UI --> CLICK["Sara clicks Draft reply"]
+    CLICK --> API["POST /api/draft"]
+    API --> LLM["LLM provider"]
+    LLM --> GUARD["Output safety validation"]
+    GUARD --> EDIT["Editable draft"]
+    EDIT --> COPY["Sara approves and copies"]

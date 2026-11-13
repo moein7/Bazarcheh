@@ -1,0 +1,2 @@
+interface Props { total:number; urgent:number }
+export default function SummaryTiles({total,urgent}:Props){return <section className="tiles"><div className="card tile"><div className="tile-label">پیام یکتای بررسی‌شده</div><div className="tile-value" data-testid="total">{total.toLocaleString('fa-IR')}</div></div><div className="card tile urgent"><div className="tile-label">پیام فوریِ معوق</div><div className="tile-value" data-testid="urgent">{urgent.toLocaleString('fa-IR')}</div></div></section>}
